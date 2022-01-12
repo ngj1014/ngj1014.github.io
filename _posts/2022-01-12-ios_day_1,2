@@ -1,129 +1,229 @@
 
 for i in 0...99{
+
     i
+    
 }
+
 for i in 0...99{
+
     print(i)
+    
 }
 
 //상수:값의 변경이 불가능하다. ->전체공간
+
 //let 상수명: 데이터타입=값
+
 let a: Int=1000
+
 a
+
 //변수 ->사용공간에 사용될 수 있다.
+
 //var 변수명:데이터 타입=값
+
 var b:Int=300
+
 b=400
 
 //데이터 타입
+
 //Int
+
 //UInt:부호가 없는 정수형
+
 //Float,Double,Bool,Character,String
+
 //모든타입 지칭 ->Any
 
 var someInt:Int=300
+
 someInt
 
 //부호 적으면 안된다.
+
 var someUint:UInt=300
+
 someUint=200
 
 var someFloat:Float=1.1
+
 someFloat=1
+
 print(someFloat)
 
+
 var someDouble:Double=1.1
+
 someDouble=1
+
 print(someDouble)
 
+
 var someBool:Bool=true
+
 someBool=false
+
 print(someBool)
 
+
 //이것도 가능하다. 처음에 초기화 안해줘도 가능하다.
+
 var someCharacter:Character
+
 someCharacter="A"
+
 someCharacter="s"
+
 
 var someString:String="안녕하세여"
 
+
+
 //타입추론
+
 var number=10
 
+
 //타입추론(2)
+
 var string="안녕~"
+
 print(string)
+
 
 //컬렉션 타입(중요):array,dictionary,set
 
+
 //Array:var 변수명:Array<변수타입>=Array<변수타입>()
+
 var numbers:Array<Int>=Array<Int>()
+
 numbers.append(1)
+
 numbers.append(2)
+
 numbers.append(3)
+
 numbers[0]
+
 numbers[1]
+
+
 //
 numbers.insert(4,at:2)
+
 numbers
+
 
 numbers.remove(at:0)
+
 numbers
+
 //간단하게 적는 방법
+
 var names:[String]=[]
+
 var number_2:[Int]=[]
+
 number_2.append(1)
+
 number_2.append(2)
+
 number_2.append(3)
+
 //Dictionary
+
 //var dic:Dictionary<String,Int>=Dictionary<String,Int>()
+
 var dic:[String:Int]=[:]
+
 dic["남궁광"]=28
+
 dic["박성린"]=26
+
 dic["김태현"]=24
+
+
 dic
+
 dic.removeValue(forKey:"남궁광")
+
 dic
+
 dic.removeValue(forKey:"박성린")
+
 dic
+
 
 //Set:축약형 표현이 없다.->암기 꼭하기
+
 var set:Set=Set<Int>()
+
 set.insert(10)
+
 set.insert(10)
+
 set.insert(20)
+
 set.insert(30)
+
 set
+
 set.remove(20)
+
 set
+
 
 //함수는 작업의 가장 작은 단위이자 코드의 집합이다.
+
 //func 함수명(파라미터이름 :데이터 타입)->반환타입{return 반환 값}
 
+
 func sum(a:Int,b:Int)->Int{
+
     return a+b
+    
 }
+
 sum(a:5,b:3)
 
+
 func hello()->String{
+
     return "Hello jacky"
+    
 }
+
 
 hello()
 
 
+
 func greeting(friend:String,me:String="gunter")
+
 {
+
     print("Hello,\(friend)! I'm \(me)")
+    
 }
+
 
 greeting(friend:"Albert")
 
+
 /*
+
  func 함수이름(전달인자 레이블:매개변수 이름: 매개변수 타입,전달인자 레이블: 매개변수 이름: 매개변수 타입...)->반환타입
+ 
  {
+ 
     return 반환 값
+    
  }
+ 
+ 
  */
 //변형코드 한번보기(위의 코드와 비슷하다)
 func sendMessage(from name:String,to myname:String)
